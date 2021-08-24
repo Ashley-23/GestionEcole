@@ -45,6 +45,26 @@
                                 name="password_confirmation" required />
             </div>
 
+
+            
+            {{-- Select option Role type  --}}
+
+            <div class="mt-4">
+                <label for="role_id">S'enregistrer en tant que :</label>
+
+                <select name="role_id" class="block mt-1 w-full">
+
+                    <option value="eleve"> Eleve </option>
+                    <option value="parent"> Parent </option>
+                    <option value="professeur"> Professeur </option>
+                    <option value="Administrateur"> Administrateur </option>
+
+                </select>
+
+            </div>
+
+
+
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
