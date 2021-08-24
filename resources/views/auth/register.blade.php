@@ -50,15 +50,15 @@
             {{-- Select option Role type  --}}
 
             <div class="mt-4">
-                <label for="role_id">S'enregistrer en tant que :</label>
+                {{-- <label for="role_id">S'enregistrer en tant que :</label> --}}
+                <x-label for="role_id" value="{{__('Register as : ')}}"/>
 
                 <select name="role_id" class="block mt-1 w-full">
 
-                    <option value="eleve"> Eleve </option>
-                    <option value="parent"> Parent </option>
-                    <option value="professeur"> Professeur </option>
-                    <option value="Administrateur"> Administrateur </option>
-
+                    <option value="student"> student </option>
+                    <option value="parent"> parent </option>
+                    <option value="teacher"> teacher </option>
+                    <option value="administrator"> administrator </option>
                 </select>
 
             </div>
