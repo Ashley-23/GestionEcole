@@ -51,6 +51,17 @@
                     {{ __('Log in') }}
                 </x-button>
             </div>
+
+            <div class="flex items-center justify-end mt-4">
+                {{-- Pour pouvoir s'inscrire en cas de non inscrption --}}
+    
+                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">
+                                    {{ __('Create a new account            ') }} <br>
+                                </a>
+                </div>
+                                
+                {{-- fin modification --}}
+
         </form>
     </x-auth-card>
 </x-guest-layout>
