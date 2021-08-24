@@ -1,3 +1,4 @@
+use Illuminate\Support\Facades\Auth;
 <?php
 
 namespace App\Http\Controllers\Auth;
@@ -48,6 +49,8 @@ class RegisteredUserController extends Controller
         event(new Registered($user));
 
         Auth::login($user);
+
+        $user->attachRole($request->role_id);
 
         return redirect(RouteServiceProvider::HOME);
     }
